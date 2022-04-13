@@ -1,0 +1,105 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- thanks
+- chitchat
+- stop
+- request_weather
+- inform
+- tell_joke
+entities:
+- date_time
+- address
+slots:
+  date_time:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  address:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
+    influence_conversation: false
+responses:
+  utter_cheer_up:
+  - text: Here is something to cheer you up
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_iamabot:
+  - text: I am a weather query voice assistant, developed by Baoming Chang, based on Rasa.
+  utter_affirm:
+  - text: OK.
+  - text: Glad to help you solve the problem!
+  - text: what else can help you?
+  utter_happy:
+  - text: Great, carry on!
+  - text: Great!
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hello, How are you doing?
+  utter_goodbye:
+  - text: Bye.
+  - text: See you next time
+  - text: Goodbye.
+  - text: Have a good day!
+  - text: see you!
+  utter_deny:
+  - text: I'm so sorry! `(*>﹏<*)′
+  - text: Sorry for such a problem.
+  utter_thanks:
+  - text: You are welcome! (✿◡‿◡)
+  utter_ask_date_time:
+  - text: What day do you want to check the weather?
+  - text: what day's weather?
+  utter_ask_address:
+  - text: Where do you want to check the weather?
+  utter_default:
+  - text: I'm sorry I didn't get it, please put it another way
+  - text: I don't seem to understand, please try again!
+  utter_ask_continue:
+  - text: What else can I help you?
+  utter_noworries:
+  - text: You are welcome! (✿◡‿◡)
+  - text: Glad to help you!
+  utter_chitchat:
+  - text: I'm a voice assistant and I have no body.
+  - text: Sorry, I don't support chat yet.
+  utter_tell_joke:
+  - text: What’s the best thing about Switzerland? I don’t know, but the flag is a big plus.
+  - text: I invented a new word! Plagiarism!
+  - text: Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.
+  - text: Hear about the new restaurant called Karma? There’s no menu, You get what you deserve.
+  - text: A woman in labor suddenly shouted, “Shouldn’t! Wouldn’t! Couldn’t! Didn’t! Can’t!” “Don’t worry,” said the doc. “Those are just contractions.”
+  - text: Did you hear about the actor who fell through the floorboards? He was just going through a stage.
+  - text: Did you hear about the claustrophobic astronaut? He just needed a little space.
+  
+actions:
+- utter_affirm
+- utter_deny
+- utter_greet
+- utter_happy
+- utter_goodbye
+- utter_thanks
+- utter_ask_date_time
+- utter_ask_address
+- weather_form
+- utter_chitchat
+- utter_noworries
+- utter_ask_continue
+- utter_iamabot
+- utter_did_that_help
+- utter_cheer_up
+- utter_tell_joke
+forms:
+  weather_form: {}

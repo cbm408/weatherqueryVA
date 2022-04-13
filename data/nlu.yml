@@ -1,0 +1,445 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - how are you
+    - how are you doing
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - so long
+    - see you soon
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - thats right
+    - yeah
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - this is impossible
+    - it is not possible
+    - impossible
+    - you are silly
+    - really bad
+    - I can find nothing
+    - can't find anything
+    - you are stupid
+    - feel like you don't know anything
+    - you're just like a fool
+    - you are like a fool
+    - i have no problem
+    - are you broken
+    - did you have a bug
+    
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fantastic
+    - that is really good
+    - very well
+    - nice
+    - so nice
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you
+    - what's your name
+- intent: request_weather
+  examples: |
+    - how's the weather
+    - tell me the weather
+    - tell me the weather in [ottawa](address) [next week](date_time)
+    - tell me what the weather will be [tomorrow](date_time)
+    - tell me what the weather is like [now](date_time)
+    - i want to know the weather 
+    - how is the weather [today](date_time)
+    - tell me [tomorrow](date_time)'s weather
+    - what is the weather like in [ottawa](address)
+    - weather in [ottawa](address)
+    - [ottawa](address) weather
+    - weather in [montreal](address) [tomorrow](date_time)
+    - tell me the weather in [vancouver](address) [today](date_time)
+    - tell me the weather in [calgary](address) [today](date_time)
+    - tell me the weather in [ottawa](address) [today](date_time)
+    - I want to know the weather in [vancouver](address) [now](date_time)
+    - I want to know the weather in [vancouver](address) [tomorrow](date_time)
+    - the weather in [vancouver](address) [tomorrow](date_time)
+    - weather in [ottawa](address) [today](date_time)
+    - can you tell me the weather in [ottawa](address) [tomorrow](date_time)
+    - [tomorrow](date_time) weather in [toronto](address)
+    - [today](date_time) weather in [ottawa](address)
+    - waht is the weather in [toronto](address) [today](date_time)
+    - [tomorrow](date_time) I will go to [quebec](address), how is the weather there
+    - [tomorrow](date_time) I will go back to [quebec](address), how is the weather there
+    - [tomorrow](date_time) I will come to [ottawa](address), how is the weather at that time
+    - [tomorrow](date_time) I will come back to [ottawa](address), tell me the weather there
+    - it is cold [today](date_time), is it also cold in [vancouver](address)
+    - help me check the weather in [ottawa](address) [tomorrow](date_time)
+    - [today](date_time) [toronto](address) weather
+    - It is snowing in [montreal](address), will it still snow [tomorrow](date_time)
+    - what is the weather [now](date_time)
+    - how is the weather [now](date_time)
+    - tell me the weather [now](date_time)
+    - is it cold outside
+    - will it be cold on [Sunday](date_time)
+    - will it rain on [Sunday](date_time)
+    - will it be cold on [Monday](date_time)
+    - will it rain on [Monday](date_time)
+    - will it be cold on [Saturday](date_time)
+    - will it rain on [Saturday](date_time)
+    - is it hot [today](date_time)
+    - is it hot outside [now](date_time)
+    - is it raining outside
+    - is it raining in [Ottawa](address)
+    - is it raining [today](date_time)
+    - is it raining [now](date_time)
+    - is it rainiing outside [now](date_time)
+    - is it cold [now](date_time)
+    - will it rain [tomorrow](date_time)
+    - will it still be cold [tomorrow](date_time)
+    - will it still rain [tomorrow](date_time)
+    - tell me the weather in [vancouver](address) [now](date_time)
+    - tell me the weather in [vancouver](address) [next week](date_time)
+    - weather in [montreal](address) [now](date_time)
+    - weather in [ottawa](address) [now](date_time)
+    - weather in [ottawa](address) [next week](date_time)
+    - I want to know the weather in [ottawa](address) [now](date_time)
+    - [today](date_time) 's weather in [ottawa](address)
+    - can you tell me the weather in [ottawa](address) [now](date_time)
+    - can you tell me [next week](date_time) 's weather in [ottawa](address)
+    - tell me the weather in [ottawa](address) [next week](date_time)
+    - I want to know the weather in [vancouver](address) [next week](date_time)
+    - weather in [next week](date_time)
+    - what is the weather like on [the day after tomorrow](date_time)
+    - the weather on [the day after tomorrow](date_time)
+    - tell me [the day after tomorrow](date_time) 's weather
+    - [the day after tomorrow](date_time) I will go to [quebec](address), how is the weather there
+    - can you tell me the weather of [the day after tomorrow] in [ottawa](address)
+    - [the day after tomorrow] 's weather
+    - the weather [now](date_time)
+    - the weather [today](date_time)
+    - tell me the weather [now](date_time)
+    - tell me the weather in [ottawa](address) [next week](date_time)
+    - tell me the weather [next week](date_time)
+    - what's the weather in [the day after tomorrow] in [ottawa](address)
+    - the weather [the day after tomorrow] in [ottawa](address)
+    - what's the weather in [ottawa](address) [the day after tomorrow] in [ottawa](address)
+     - tell me the weather in [ottawa](address) on [Monday](date_time)
+    - tell me what the weather will be on [Monday](date_time)
+    - tell me what the weather is like on next [Monday](date_time)
+    - how is the weather on [Monday](date_time)
+    - tell me next [Monday](date_time)'s weather
+    - what is the weather like on [Monday](date_time)
+    - weather on [Monday](date_time)
+    - [Monday](date_time)) weather
+    - weather in [montreal](address) on [Monday](date_time)
+    - tell me the weather in [vancouver](address) on [Monday](date_time)
+    - I want to know the weather in [vancouver](address) on [Monday](date_time)
+    - the weather in [vancouver](address) on [Monday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Monday](date_time)
+    - [Monday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Monday](date_time)
+    - I will go to [quebec](address) on [Monday](date_time), how is the weather there
+    - On [Monday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Monday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Monday](date_time)
+    - [Monday](date_time) [toronto](address) weather
+    - what is the weather on [Monday](date_time)
+    - how is the weather on [Monday](date_time)
+    - tell me the weather on [Monday](date_time)
+    - tell me the weather in [ottawa](address) on [Tuesday](date_time)
+    - tell me what the weather will be on [Tuesday](date_time)
+    - tell me what the weather is like on next [Tuesday](date_time)
+    - how is the weather on [Tuesday](date_time)
+    - tell me next [Tuesday](date_time)'s weather
+    - what is the weather like on [Tuesday](date_time)
+    - weather on [Tuesday](date_time)
+    - [Tuesday](date_time)) weather
+    - weather in [montreal](address) on [Tuesday](date_time)
+    - tell me the weather in [vancouver](address) on [Tuesday](date_time)
+    - I want to know the weather in [vancouver](address) on [Tuesday](date_time)
+    - the weather in [vancouver](address) on [Tuesday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Tuesday](date_time)
+    - [Tuesday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Tuesday](date_time)
+    - I will go to [quebec](address) on [Tuesday](date_time), how is the weather there
+    - On [Tuesday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Tuesday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Tuesday](date_time)
+    - [Tuesday](date_time) [toronto](address) weather
+    - what is the weather on [Tuesday](date_time)
+    - how is the weather on [Tuesday](date_time)
+    - tell me the weather on [Tuesday](date_time)
+    - tell me the weather in [ottawa](address) on [Wednesday](date_time)
+    - tell me what the weather will be on [Wednesday](date_time)
+    - tell me what the weather is like on next [Wednesday](date_time)
+    - how is the weather on [Wednesday](date_time)
+    - tell me next [Wednesday](date_time)'s weather
+    - what is the weather like on [Wednesday](date_time)
+    - weather on [Wednesday](date_time)
+    - [Wednesday](date_time)) weather
+    - weather in [montreal](address) on [Wednesday](date_time)
+    - tell me the weather in [vancouver](address) on [Wednesday](date_time)
+    - I want to know the weather in [vancouver](address) on [Wednesday](date_time)
+    - the weather in [vancouver](address) on [Wednesday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Wednesday](date_time)
+    - [Wednesday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Wednesday](date_time)
+    - I will go to [quebec](address) on [Wednesday](date_time), how is the weather there
+    - On [Wednesday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Wednesday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Wednesday](date_time)
+    - [Wednesday](date_time) [toronto](address) weather
+    - what is the weather on [Wednesday](date_time)
+    - how is the weather on [Wednesday](date_time)
+    - tell me the weather on [Wednesday](date_time)
+    - tell me the weather in [ottawa](address) on [Thursday](date_time)
+    - tell me what the weather will be on [Thursday](date_time)
+    - tell me what the weather is like on next [Thursday](date_time)
+    - how is the weather on [Thursday](date_time)
+    - tell me next [Thursday](date_time)'s weather
+    - what is the weather like on [Thursday](date_time)
+    - weather on [Thursday](date_time)
+    - [Thursday](date_time)) weather
+    - weather in [montreal](address) on [Thursday](date_time)
+    - tell me the weather in [vancouver](address) on [Thursday](date_time)
+    - I want to know the weather in [vancouver](address) on [Thursday](date_time)
+    - the weather in [vancouver](address) on [Thursday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Thursday](date_time)
+    - [Thursday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Thursday](date_time)
+    - I will go to [quebec](address) on [Thursday](date_time), how is the weather there
+    - On [Thursday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Thursday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Thursday](date_time)
+    - [Thursday](date_time) [toronto](address) weather
+    - what is the weather on [Thursday](date_time)
+    - how is the weather on [Thursday](date_time)
+    - tell me the weather on [Thursday](date_time)
+    - tell me the weather in [ottawa](address) on [Friday](date_time)
+    - tell me what the weather will be on [Friday](date_time)
+    - tell me what the weather is like on next [Friday](date_time)
+    - how is the weather on [Friday](date_time)
+    - tell me next [Friday](date_time)'s weather
+    - what is the weather like on [Friday](date_time)
+    - weather on [Friday](date_time)
+    - [Friday](date_time)) weather
+    - weather in [montreal](address) on [Friday](date_time)
+    - tell me the weather in [vancouver](address) on [Friday](date_time)
+    - I want to know the weather in [vancouver](address) on [Friday](date_time)
+    - the weather in [vancouver](address) on [Friday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Friday](date_time)
+    - [Friday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Friday](date_time)
+    - I will go to [quebec](address) on [Friday](date_time), how is the weather there
+    - On [Friday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Friday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Friday](date_time)
+    - [Friday](date_time) [toronto](address) weather
+    - what is the weather on [Friday](date_time)
+    - how is the weather on [Friday](date_time)
+    - tell me the weather on [Friday](date_time)
+    - tell me the weather in [ottawa](address) on [Saturday](date_time)
+    - tell me what the weather will be on [Saturday](date_time)
+    - tell me what the weather is like on next [Saturday](date_time)
+    - how is the weather on [Saturday](date_time)
+    - tell me next [Saturday](date_time)'s weather
+    - what is the weather like on [Saturday](date_time)
+    - weather on [Saturday](date_time)
+    - [Saturday](date_time)) weather
+    - weather in [montreal](address) on [Saturday](date_time)
+    - tell me the weather in [vancouver](address) on [Saturday](date_time)
+    - I want to know the weather in [vancouver](address) on [Saturday](date_time)
+    - the weather in [vancouver](address) on [Saturday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Saturday](date_time)
+    - [Saturday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Saturday](date_time)
+    - I will go to [quebec](address) on [Saturday](date_time), how is the weather there
+    - On [Saturday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Saturday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Saturday](date_time)
+    - [Saturday](date_time) [toronto](address) weather
+    - what is the weather on [Saturday](date_time)
+    - how is the weather on [Saturday](date_time)
+    - tell me the weather on [Saturday](date_time)
+    - tell me the weather in [ottawa](address) on [Sunday](date_time)
+    - tell me what the weather will be on [Sunday](date_time)
+    - tell me what the weather is like on next [Sunday](date_time)
+    - how is the weather on [Sunday](date_time)
+    - tell me next [Sunday](date_time)'s weather
+    - what is the weather like on [Sunday](date_time)
+    - weather on [Sunday](date_time)
+    - [Sunday](date_time)) weather
+    - weather in [montreal](address) on [Sunday](date_time)
+    - tell me the weather in [vancouver](address) on [Sunday](date_time)
+    - I want to know the weather in [vancouver](address) on [Sunday](date_time)
+    - the weather in [vancouver](address) on [Sunday](date_time)
+    - can you tell me the weather in [ottawa](address) on [Sunday](date_time)
+    - [Sunday](date_time) weather in [toronto](address)
+    - waht is the weather in [toronto](address) on [Sunday](date_time)
+    - I will go to [quebec](address) on [Sunday](date_time), how is the weather there
+    - On [Sunday](date_time), I will come to [ottawa](address), how is the weather at that time
+    - on [Sunday](date_time), I will come back to [ottawa](address), tell me the weather there
+    - help me check the weather in [ottawa](address) on [Sunday](date_time)
+    - [Sunday](date_time) [toronto](address) weather
+    - what is the weather on [Sunday](date_time)
+    - how is the weather on [Sunday](date_time)
+    - tell me the weather on [Sunday](date_time)
+- intent: inform
+  examples: |
+    - tell me weather in [ottawa](address)
+    - [ottawa](address)
+    - how is [toronto](address)？
+    - I want to know weather in [calgary](address)
+    - I am in [vancouver](address) [now](date_time)
+    - in [calgary](address)
+    - I want to check the weather in [hamilton](address)
+    - check the weather in [montreal](address)
+    - how is the weather in [shanghai](address)
+    - how is the weather in [beijing](address)
+    - what is the weather in [new york](address)
+    - tell me the weather in [tokyo](address)
+    - tell me weather in [hamilton](address)
+    - still in [ottawa](address)
+    - in [toronto](address)
+    - I am in [ottawa](address) [now](date_time)
+    - the weather in [vancouver](address)
+    - [today](date_time)
+    - weather [tomorrow](date_time)
+    - weather [today](date_time)
+    - [tomorrow](date_time)
+    - [now](date_time)
+    - [next week](date_time)
+    - [the day after tomorrow](date_time)
+    - [today](date_time)
+    - the weaether [tomorrow](date_time)
+    - the weaether [now](date_time)
+    - the weaether [next week](date_time)
+    - [the day after tomorrow](date_time)
+    - the weaether [today](date_time)
+    - tell me the weather [tomorrow](date_time)
+    - tell me the weather [now](date_time)
+    - tell me the weather [next week](date_time)
+    - tell me the weather [the day after tomorrow](date_time)
+    - how's the weather [tomorrow](date_time)
+    - how's the weather [today](date_time)
+    - check [tomorrow](date_time) 's weather
+    - check [today](date_time) 's weather
+    - [tomorrow](date_time)'s
+    - help me check [today](date_time) 's
+    - I don't know the weather today](date_time)
+    - [beijing](address)
+    - [shanghai](address)
+    - [ottawa](address)
+    - [calgary](address)
+    - [new york](address)
+    - [vancouver](address)
+    - [montreal](address)
+    - [hamilton](address)
+    - [london](address)
+    - [paris](address)
+    - [dalian](address)
+    - [rome](address)
+    - [Monday](date_time)
+    - [Tuesday](date_time)
+    - [Wednesday](date_time)
+    - [Thursday](date_time)
+    - [Friday](date_time)
+    - [Saturday](date_time)
+    - [Sunday](date_time)
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+    - thank you very much
+    - you helped me a lot
+    - thank you for your help
+
+- intent: chitchat
+  examples: |
+    - did you have a good time today
+    - Can you move your body 
+    - Are you ok
+    - what are you doing now
+    - what brand of computer do you like
+    - how have you been lately
+    - It's hard to develop a voice assistant
+    - What do you think of Siri
+    - Did you know the new coronavirus
+    - Do you have any favorite music
+    
+- intent: stop
+  examples: |
+    - end
+    - over
+    - finished
+    - that's it
+    
+- intent: tell_joke
+  examples: |
+    - tell me a joke
+    - tell a joke
+    - say something funny
+    - joke
